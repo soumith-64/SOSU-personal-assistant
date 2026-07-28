@@ -1,0 +1,106 @@
+# ==========================================
+# SOSU - .gitignore
+# ==========================================
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# -------------------------
+# Virtual Environment
+# -------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# -------------------------
+# Distribution / Packaging
+# -------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# -------------------------
+# Logs
+# -------------------------
+logs/*.log
+*.log
+
+# Keep the logs folder
+!logs/.gitkeep
+
+# -------------------------
+# Database
+# -------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# Uncomment if you DON'T want to upload sosu.db
+# database/sosu.db
+
+# -------------------------
+# Cache
+# -------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# -------------------------
+# Temporary Files
+# -------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# -------------------------
+# IDE
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Operating System
+# -------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -------------------------
+# Environment Variables
+# -------------------------
+.env
+.env.*
+
+# -------------------------
+# Coverage
+# -------------------------
+.coverage
+coverage.xml
+htmlcov/
+
+# -------------------------
+# Jupyter
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
+# Data
+# -------------------------
+data/cache/*
+!data/cache/.gitkeep
+
+data/temp/*
+!data/temp/.gitkeep
+
+data/downloads/*
+!data/downloads/.gitkeep
