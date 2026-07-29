@@ -25,7 +25,12 @@ def info(message):
     write_log(format_log(message, "INFO"))
 
 
+def warning(message):
+    write_log(format_log(message, "WARNING"))
 
+
+def error(message):
+    write_log(format_log(message, "ERROR"))
 
 
     
