@@ -21,6 +21,10 @@ def write_log(sentence):
     else:
         raise ValueError("Log message cannot be empty.")
 
+def info(message):
+    write_log(format_log(message, "INFO"))
+
+
 
 
 
