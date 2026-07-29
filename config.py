@@ -5,6 +5,7 @@ VERSION = "0.0.1"
 AUTHOR = "Soumith.J.V"
 DEBUG_MODE = True
 PROMPT =  "SOSU >"
+DESCRIPTION = "Intelligent Desktop Assistant"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
