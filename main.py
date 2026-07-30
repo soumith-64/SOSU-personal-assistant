@@ -19,8 +19,3 @@ def run():
                 break
 
             print(f"{PROMPT} Hi, I'm waiting to hear from you.")
-            logger.warning("Empty user input received.")
-        except KeyboardInterrupt:
-            print("Error Keyboard Interrupted")
-            logger.error("KeyboardInterrupt")
-            break
