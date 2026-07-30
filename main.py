@@ -2,4 +2,7 @@ from core import startup,parser
 
 startup.start()
 input_user = input()
-parser.split_imput(input_user)
+result = parser.parse_input(input_user)
+
+if result:
+    command, argument = result

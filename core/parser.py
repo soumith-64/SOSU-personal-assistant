@@ -2,24 +2,30 @@ from config import PROMPT
 from utils import logger
 
 
-def check_inp(val):
-    
+def validate_input(val):
+
     if not val or not val.strip():
         logger.warning("Empty user input received.")
         print(f"{PROMPT} Hi, I'm waiting to hear from you.")
-        return
+        return "", ""
 
     usr_inp_sep = val.strip().split()
 
     if len(usr_inp_sep) == 1:
         command = usr_inp_sep[0]
-        print(f"Command: {command}")
+        return command,""
     else:
         command = usr_inp_sep[0]
         argument = " ".join(usr_inp_sep[1:])
-        print(f"Command: {command}\nArgument: {argument}")
+        return command,argument
+        
 
 
-def split_input(user_input):
+def parse_input(user_input):
     logger.info(f"User: {user_input}")
-    check_inp(user_input)
+    command,argument = validate_input(user_input)
+
+    if not command and not argument:
+        return
+
+    return command, argument
