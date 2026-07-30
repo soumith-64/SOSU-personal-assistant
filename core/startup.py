@@ -11,5 +11,3 @@ def start():
     print("Initialization complete.")
     print(f"{PROMPT} Ready.")
     logger.info("SOSU Started")
-print("")
-print("")
