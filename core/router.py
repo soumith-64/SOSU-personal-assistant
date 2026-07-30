@@ -1,7 +1,24 @@
-route_command = ["help", "open", "close", "search", "calculate", "weather", "exit", "about"]
+from automation import applications
+from utils import logger
+
+route_command = {
+    "HELLO": applications.handle_hello,
+    "HELP": applications.handle_help,
+    "OPEN": applications.handle_open,
+    "CLOSE": applications.handle_close,
+    "SEARCH": applications.handle_search,
+    "CALCULATE": applications.handle_calculate,
+    "WEATHER": applications.handle_weather,
+    "EXIT": applications.handle_exit,
+    "ABOUT": applications.handle_about,
+}
+
 
 def route(command,argument):
-    if  command in route_command :
-        if command == ""
-    else:
-        print("Sorry sir that command is not available yet")
+        
+        handler = route_command.get(command,applications.handle_default)
+        if handler:
+                
+            handler(argument)
+            logger.info(f"Routing command {command} argument {argument}")
+

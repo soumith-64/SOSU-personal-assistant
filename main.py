@@ -1,8 +1,7 @@
-from core import startup,parser
+from core import startup,assistant 
 
 startup.start()
-input_user = input()
-result = parser.parse_input(input_user)
 
-if result:
-    command, argument = result
+assistant.run()
+
+
