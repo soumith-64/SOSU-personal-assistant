@@ -9,7 +9,6 @@ def run():
             input_user = input("User : ")
             if input_user.strip():
                 result = parser.parse_input(input_user)
-                break
 
             print(f"{PROMPT} Hi, I'm waiting to hear from you.")
             logger.warning("Empty user input received.")

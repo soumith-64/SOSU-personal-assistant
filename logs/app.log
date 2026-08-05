@@ -55,3 +55,6 @@
 [2026-07-30 16:22:05] [INFO] [SOSU Started]
 [2026-07-30 16:22:07] [WARNING] [Empty user input received.]
 [2026-07-30 16:22:17] [ERROR] [KeyboardInterrupt]
+[2026-07-31 17:51:32] [INFO] [SOSU Started]
+[2026-07-31 17:51:49] [INFO] [User: Hello i am sanju]
+[2026-07-31 17:51:49] [INFO] [Routing command HELLO argument I AM SANJU]

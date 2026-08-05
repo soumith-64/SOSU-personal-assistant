@@ -1,12 +1,32 @@
+import sys
+import subprocess
+
+open_app = lambda app,mac_app : subprocess.Popen(["open","-a",mac_app] if sys.platform == "darwin" else [app])
+
+applications_ava = {
+    "notepad": ("notepad", "TextEdit"),
+    "paint": ("mspaint", "Preview"),
+    "cmd": ("cmd", "Terminal"),
+    "explorer": ("explorer", "Finder"),
+    "calculator": ("calc", "Calculator"),
+}
 
 def handle_hello(arg=""):
-    print(f"Hello ")
+    print(f"Hello, Hi there ")
     
 def handle_help(arg=""):
     print(f"Executing HELP with argument: {arg}")
 
 def handle_open(arg=""):
+
+    arg = arg.strip().lower()
     print(f"Executing OPEN with argument: {arg}")
+    app_info  = applications_ava.get(arg)
+    if app_info:
+        win_app,mac_app = app_info
+        open_app(win_app,mac_app)
+    else:
+        print("No app found")
 
 def handle_close(arg=""):
     print(f"Executing CLOSE with argument: {arg}")
